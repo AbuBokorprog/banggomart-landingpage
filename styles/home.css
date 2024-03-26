@@ -15,6 +15,48 @@
   background-color: rgb(1, 114, 5);
 }
 
+/* banner */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.banner {
+  height: 400px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+li:hover {
+  background-color: rgb(5, 178, 14);
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+.slick-prev {
+  left: 10px;
+  background-color: green;
+}
+
+.slick-next {
+  right: 10px;
+  background-color: green;
+}
+
+/* footer */
 footer {
   background-color: black !important;
 }
