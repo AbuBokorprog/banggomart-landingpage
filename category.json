@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://banggomart.com/category/1687165234.png",
+    "category": "Electronics",
+    "total_items": 9
+  },
+  {
+    "id": 2,
+    "image": "https://banggomart.com/category/1687258461.png",
+    "category": "Health & Beauty",
+    "total_items": 12
+  },
+  {
+    "id": 3,
+    "image": "https://banggomart.com/category/1687259161.png",
+    "category": "Kitchen Tools",
+    "total_items": 17
+  },
+  {
+    "id": 4,
+    "image": "https://banggomart.com/category/1687259245.png",
+    "category": "Lifestyle ",
+    "total_items": 8
+  },
+  {
+    "id": 5,
+    "image": "https://banggomart.com/category/1687259326.png",
+    "category": "Smart Gadgets",
+    "total_items": 12
+  },
+  {
+    "id": 6,
+    "image": "https://banggomart.com/category/1709554048.png",
+    "category": "furniture & Decor",
+    "total_items": 4
+  }
+]
