@@ -10,3 +10,15 @@
   width: 500px !important;
   outline: 0;
 }
+.dropdown {
+  width: 100px !important;
+  background-color: rgb(1, 114, 5);
+}
+
+footer {
+  background-color: black !important;
+}
+a {
+  text-decoration: none;
+  color: white;
+}

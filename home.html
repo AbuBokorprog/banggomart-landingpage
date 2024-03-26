@@ -16,8 +16,8 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="container-md">
-    <header>
+  <body class="">
+    <header class="">
       <nav class="navbar d-none d-md-block navbar-expand-lg">
         <div class="container">
           <img
@@ -130,9 +130,131 @@
           </div>
         </div>
       </div>
+
+      <nav class="bg-success">
+        <div class="navbar navbar-expand-md navbar-light">
+          <div class="container-fluid container-md">
+            <button class="nav-item text-white dropdown border-0 bg-success">
+              <div
+                class="nav-link dropdown ps-0 text-white"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </div>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </button>
+            <button
+              class="navbar-toggler bg-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav gap-2">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="home.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Return Process</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Offer Product</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <h1 class="text-success">Hello world</h1>
+    <section class="container-md my-5">
+      <h1 class="text-success">Hello world</h1>
+    </section>
+
+    <footer class="footer text-white">
+      <div class="container-md">
+        <img
+          src="https://banggomart.com/setting/1693807608.png"
+          class="border-0 w-25 mt-5"
+          alt="Banggomart Logo"
+        />
+        <div class="mt-5">
+          <div class="row">
+            <!-- Policy -->
+            <div class="col-lg-3 text-white mb-2">
+              <h5>Policy</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Refund Policy</a></li>
+              </ul>
+            </div>
+            <!-- Contacts -->
+            <div class="col-lg-3 text-white mb-2">
+              <h5>Contacts</h5>
+              <ul class="list-unstyled">
+                <li>123 Street Name</li>
+                <li>City, Country</li>
+                <li>email@example.com</li>
+                <li>123-456-7890</li>
+              </ul>
+            </div>
+            <!-- Others -->
+            <div class="col-lg-3 text-white mb-2">
+              <h5>Others</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+              </ul>
+            </div>
+            <!-- Follow Us -->
+            <div class="col-lg-3 text-white mb-2">
+              <h5>Follow Us</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <p>&copy; 2024 Your Website Name. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
