@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/home.css" />
+    <script
+      src="https://kit.fontawesome.com/942922f9a6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="container-md">
+    <header>
+      <nav class="navbar d-none d-md-block navbar-expand-lg">
+        <div class="container">
+          <img
+            src="https://banggomart.com/setting/1693807608.png"
+            class="logo border-0"
+            alt="Banggomart Logo"
+          />
+
+          <div class="collapse navbar-collapse justify-content-end">
+            <form class="mx-auto h-full">
+              <div class="input-group search">
+                <input
+                  class="form-control border-0 py-3 px-2 search-field"
+                  type="search"
+                  placeholder="Search for items..."
+                  aria-label="Search"
+                />
+                <button class="border-0 bg-white" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+            <div class="d-flex align-items-center">
+              <button class="btn btn-outline-success ms-2 me-2 border-0">
+                <i class="fa-solid fa-cart-plus"></i> Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar d-block d-md-none navbar-expand">
+        <div class="container">
+          <img
+            src="https://banggomart.com/setting/1693807608.png"
+            class="logo border-0"
+            alt="Banggomart Logo"
+          />
+
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="d-flex align-items-center">
+              <button
+                id="searchToggle"
+                class="btn btn-outline-secondary bg-white"
+                type="submit"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button class="btn btn-outline-primary ms-2 me-2 border-0">
+                <i class="fa-solid fa-cart-plus"></i> Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="mx-auto">
+                <div
+                  class="input-group w-100 search d-flex justify-content-between"
+                >
+                  <div>
+                    <input
+                      class="form-control border-0 py-2"
+                      type="search"
+                      id="searchInput"
+                      placeholder="Search for items..."
+                      aria-label="Search"
+                    />
+                  </div>
+                  <button
+                    id="searchSubmit"
+                    class="border-0 bg-white"
+                    type="submit"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cart</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Your cart items go here...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <h1 class="text-success">Hello world</h1>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

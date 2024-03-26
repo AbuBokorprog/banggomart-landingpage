@@ -1,0 +1,12 @@
+.logo {
+  width: 100px;
+}
+.search {
+  border: 2px solid green !important;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+.search-field {
+  width: 500px !important;
+  outline: 0;
+}
