@@ -94,6 +94,7 @@ $(".category-carousel").slick({
     },
   ],
 });
+
 $(".hot-carousel").slick({
   infinite: true,
   speed: 400,
@@ -130,4 +131,18 @@ $(".hot-carousel").slick({
       },
     },
   ],
+});
+
+const cardElements = document.querySelectorAll(".card");
+cardElements.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.querySelector(".add-to-cart-btn").style.display = "block";
+    card.querySelector(".price").style.display = "block";
+    card.querySelector(".add-to-cart-btn").style.animation =
+      "bottomToTop 2s ease forwards";
+  });
+  card.addEventListener("mouseleave", () => {
+    card.querySelector(".add-to-cart-btn").style.display = "none";
+    card.querySelector(".price").style.display = "none";
+  });
 });

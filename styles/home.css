@@ -14,6 +14,10 @@
   width: 100px !important;
   background-color: rgb(1, 114, 5);
 }
+.link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
 
 /* banner */
 .dropdown:hover .dropdown-menu {
@@ -74,9 +78,31 @@ li:hover {
 }
 
 .hot-img {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
+  width: 70%;
+
+  margin: 12px auto 0 auto;
+}
+.add-button {
+  height: 40px;
+  animation: bottomToTop 2s ease forwards;
+}
+.add-to-cart-btn {
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
+.price {
+  display: none;
+}
+
+@keyframes bottomToTop {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .slick-product-prev {
