@@ -73,6 +73,50 @@ li:hover {
   margin: 0 auto;
 }
 
+.hot-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.slick-product-prev {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slick-product-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slick-product-prev {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  color: black;
+  border: 0;
+  border-radius: 50%;
+  background-color: gainsboro;
+}
+.slick-product-next {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  color: black;
+  border: 0;
+  border-radius: 50%;
+  background-color: gainsboro;
+}
+.slick-product-prev:hover,
+.slick-product-next:hover {
+  color: white;
+  background-color: green;
+}
 /* footer */
 footer {
   background-color: black !important;
