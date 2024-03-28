@@ -1,23 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const searchToggle = document.getElementById("searchToggle");
-  const searchModal = new bootstrap.Modal(
-    document.getElementById("searchModal")
-  );
-
-  searchToggle.addEventListener("click", function () {
-    searchModal.toggle();
-  });
-
-  const searchSubmit = document.getElementById("searchSubmit");
-
-  searchSubmit.addEventListener("click", function () {
-    const searchInputValue = document.getElementById("searchInput").value;
-
-    console.log("Searching for:", searchInputValue);
-    // Close modal after search action
-    searchModal.hide();
-  });
-});
+// banner slider
 
 $(".carousel").slick({
   infinite: true,
@@ -33,33 +14,7 @@ $(".carousel").slick({
   cssEase: "linear",
 });
 
-// category
-// const categoryCarousel = document.querySelector(".category-carousel");
-// fetch("/category.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-
-//     data?.map((item) => {
-//       const card = document.createElement("div");
-
-//       card.innerHTML = `
-//       <div
-//           class="card text-center mx-4 bg-light border-0"
-//           style="width: 10rem"
-//         >
-//         <img src="${item.image}" class="card-img-top category-img" alt="...">
-//         <div class="card-body">
-//           <p class="card-text">${item.category}</p>
-//           <p class="card-text">${item.total_items} items</p>
-//         </div>
-//         </div>
-//         `;
-//       categoryCarousel.appendChild(card);
-//     });
-//   })
-//   .catch((error) => console.error("Error fetching data:", error));
-
+// category carousel
 $(".category-carousel").slick({
   infinite: true,
   speed: 400,
@@ -82,6 +37,10 @@ $(".category-carousel").slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
+        prevArrow:
+          '<button type="button" class="slick-product-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow:
+          '<button type="button" class="slick-product-next"><i class="fa-solid fa-chevron-right"></i></button>',
       },
     },
     {
@@ -90,10 +49,16 @@ $(".category-carousel").slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         arrows: true,
+        prevArrow:
+          '<button type="button" class="slick-product-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow:
+          '<button type="button" class="slick-product-next"><i class="fa-solid fa-chevron-right"></i></button>',
       },
     },
   ],
 });
+
+// hot, new and regular product carousel
 
 $(".hot-carousel").slick({
   infinite: true,
@@ -132,6 +97,8 @@ $(".hot-carousel").slick({
     },
   ],
 });
+
+// add cart button and price show on hover
 
 const cardElements = document.querySelectorAll(".card");
 cardElements.forEach((card) => {

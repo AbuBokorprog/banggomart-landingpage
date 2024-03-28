@@ -14,21 +14,12 @@ fetch("/public/product.json")
         <div class="col-lg-4 col-md-6 col-sm-12">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src=${image[0]} class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src=${image[1]} class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src=${image[1]} class="d-block w-100" alt="...">
-          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <button class="carousel-control-prev slick-product-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <button class="carousel-control-next slick-product-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -92,17 +83,27 @@ fetch("/public/product.json")
 `;
 
     detailsDiv.appendChild(div);
+
+    const carouselInner = document.querySelector(".carousel-inner");
+    image.forEach((imageUrl, index) => {
+      const carouselItem = document.createElement("div");
+      carouselItem.classList.add("carousel-item");
+
+      if (index === 0) {
+        carouselItem.classList.add("active");
+      }
+
+      const img = document.createElement("img");
+      img.src = imageUrl;
+      img.classList.add("d-block", "w-100");
+      img.alt = "Product Image";
+
+      carouselItem.appendChild(img);
+      carouselInner.appendChild(carouselItem);
+    });
   });
 
-$(".slider").slick({
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-});
+// quantity increase and decrease
 
 document.addEventListener("DOMContentLoaded", function () {
   const minusBtn = document.getElementById("minusBtn");
@@ -110,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const quantityDisplay = document.getElementById("quantityDisplay");
 
   let quantity = 1;
-  console.log(quantity);
   // Update quantity display function
   const updateQuantityDisplay = () => {
     quantityDisplay.textContent = quantity;
@@ -131,4 +131,16 @@ document.addEventListener("DOMContentLoaded", function () {
       updateQuantityDisplay();
     }
   });
+});
+
+// slider
+
+$(".slider").slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
 });
