@@ -19,7 +19,7 @@ a:hover {
 .custom-dropdown-menu {
   width: 326px !important;
 }
-.dropdown {
+#dropdown {
   width: 100px !important;
   background-color: rgb(1, 114, 5);
 }

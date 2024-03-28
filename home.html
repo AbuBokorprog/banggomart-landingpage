@@ -22,7 +22,7 @@
     ></script>
   </head>
   <body class="">
-    <header class="sticky-top bg-white">
+    <header class="sticky-top bg-white overflow-hidden">
       <nav class="navbar d-none d-md-block navbar-expand-lg">
         <div class="container">
           <img
@@ -46,9 +46,15 @@
               </div>
             </form>
             <div class="d-flex align-items-center">
-              <button class="btn btn-outline-success ms-2 me-2 border-0">
-                <i class="fa-solid fa-cart-plus"></i> Cart
-              </button>
+              <div class="dropdown bg-white">
+                <button class="btn bg-white ms-2 me-2 border-0 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-cart-plus"></i> Cart
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">View Cart</a></li>
+                  <li><a class="dropdown-item" href="#">Checkout</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -63,30 +69,31 @@
 
           <div class="collapse navbar-collapse justify-content-end">
             <div class="d-flex align-items-center">
-              <div class="dropdown">
-                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="bg-white dropdown-center">
+                <button class=" bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" style="position: absolute; left: 50%; transform: translateX(-50%);">
                   <form class="mx-auto">
-                    <div class="input-group search d-flex justify-content-center">
+                    <div class="input-group border-0 search d-flex justify-content-center">
                       <div>
-                        <input class="form-control border-0 py-2" type="search"  placeholder="Search for items..."  />
+                        <input class="form-control border-0 py-2" type="search" placeholder="Search for items..." />
                       </div>
-                      <button id="searchSubmit" class="border-0 bg-white" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
                     </div>
                   </form>
                 </div>
+
               </div>
 
-
-
-
-              <button class="btn btn-outline-primary ms-2 me-2 border-0">
-                <i class="fa-solid fa-cart-plus"></i> Cart
-              </button>
+              <div class="dropdown bg-white">
+                <button class="btn bg-white ms-2 me-2 border-0 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-cart-plus"></i> Cart
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">View Cart</a></li>
+                  <li><a class="dropdown-item" href="#">Checkout</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
