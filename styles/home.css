@@ -6,23 +6,26 @@
   border-radius: 3px;
   text-decoration: none !important;
 }
+/* a:hover {
+  color: black !important;
+} */
 .search-field {
   width: 500px !important;
   outline: 0;
+}
+.custom-dropdown-menu {
+  width: 326px !important; /* Adjust the width as needed */
 }
 .dropdown {
   width: 100px !important;
   background-color: rgb(1, 114, 5);
 }
 .link {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  color: inherit;
 }
 
 /* banner */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 
 .banner {
   height: 400px;

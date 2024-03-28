@@ -1,21 +1,40 @@
 const params = new URLSearchParams(window.location.search);
 const params1 = params.get("param");
-console.log(params1);
 
 fetch("/public/product.json")
   .then((res) => res.json())
   .then((data) => {
     const product = data?.find((item) => item.name === params1);
-    console.log(product);
+
     const { name, price, discountPrice, image } = product;
     const detailsDiv = document.getElementById("ProductDetails");
     const div = document.createElement("div");
     div.classList.add("row");
     div.innerHTML = `
-        <div class="col-lg-4 col-md-5 col-sm-12">
-          <img src=${image[0]} alt="" />
-        </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src=${image[0]} class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=${image[1]} class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=${image[1]} class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
           <h3 class="fw-bold fs-2">
             ${name}
           </h3>
@@ -28,27 +47,28 @@ fetch("/public/product.json")
             </h3>
           </div>
           <div class="d-flex justify-content-start gap-2 align-items-center">
-            <button
+            <button id="minusBtn"
               class="border p-2 border-success"
               style="border-radius: 45%"
             >
-              <i class="fa-solid fa-minus"></i>
+              <i class="fa-solid fa-minus" ></i>
             </button>
-            <div class="px-5 border py-2 border-success rounded-2">1</div>
+            <div class="px-5 border py-2 border-success rounded-2" id="quantityDisplay">1</div>
             <button
+            id="plusBtn"
               class="border p-2 border-success"
               style="border-radius: 45%"
             >
-              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-plus" ></i>
             </button>
           </div>
           <div
-            class="d-flex my-4 fw-bold justify-content-between align-items-center"
+            class="d-flex my-4 fw-bold justify-content-start gap-4 align-items-center"
           >
-            <button class="btn btn-success fs-5 px-5 py-3 fw-bold">
+            <button class="btn btn-success fs-5 py-3 fw-bold">
               <i class="fa-solid fa-cart-shopping"></i> Add To Cart
             </button>
-            <button class="btn btn-success fs-5 px-5 py-3 fw-bold">
+            <button class="btn btn-success fs-5 py-3 fw-bold">
               <i class="fa-solid fa-truck"></i> Quick Order
             </button>
           </div>
@@ -58,7 +78,7 @@ fetch("/public/product.json")
             </button>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 overflow-auto">
+        <div class="col-lg-3 col-md-6 col-sm-12 overflow-auto">
           <h3>Category</h3>
           <ul class="list-unstyled">
             <li class="border p-3">Electricity</li>
@@ -73,3 +93,42 @@ fetch("/public/product.json")
 
     detailsDiv.appendChild(div);
   });
+
+$(".slider").slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const minusBtn = document.getElementById("minusBtn");
+  const plusBtn = document.getElementById("plusBtn");
+  const quantityDisplay = document.getElementById("quantityDisplay");
+
+  let quantity = 1;
+  console.log(quantity);
+  // Update quantity display function
+  const updateQuantityDisplay = () => {
+    quantityDisplay.textContent = quantity;
+  };
+
+  // Event listener for plus button
+  plusBtn.addEventListener("click", () => {
+    if (quantity < 10) {
+      quantity++;
+      updateQuantityDisplay();
+    }
+  });
+
+  // Event listener for minus button
+  minusBtn.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      updateQuantityDisplay();
+    }
+  });
+});
